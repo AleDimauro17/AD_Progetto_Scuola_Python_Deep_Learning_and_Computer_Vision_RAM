@@ -1,0 +1,46 @@
+=========================================================================
+NOTE DI PROGETTO: IN QUESTO FILE VIENE RIPORTATA UNA PANORAMICA ORDINATA
+DI TUTTI I PASSAGGI E DEGLI SCRIPT SVILUPPATI PER QUESTO PROGETTO.
+
+TITOLO PROGETTO: "DEEP PRINTING: UN APPROCCIO DI MODELLAZIONE PREDITTIVA 
+E DI MONITORAGGIO DELLA QUALITÀ NELLA PRODUZIONE ADDITIVA ROBOTIZZATA".
+=========================================================================
+
+-------------------------------------------------------------------------
+1. SCRIPT SVILUPPATI PER LA PARTE DI MACHINE LEARNING
+-------------------------------------------------------------------------
+	
+- 1_Dataset.py
+Script usato per gestire l'importazione, la pulizia e la strutturazione 
+preliminare del dataset tabulare contenente i parametri di processo 
+associati agli 81 cubetti stampati mediante il manipolatore robotico;
+
+- 2_Addestramento.py
+Script che si occupa dell'addestramento di un modello predittivo basato 
+su una rete neurale di tipo Multi-Layer Perceptron (MLP), sfruttando i parametri 
+numerici di stampa per stimare la conformità o la qualità dei pezzi;
+
+- 3_Predizione.py
+Script che implementa un'interfaccia grafica per valutare nuovi parametri 
+di processo estraendo la predizione in tempo reale;
+
+-------------------------------------------------------------------------
+2. SCRIPT SVILUPPATI PER LA PARTE DI COMPUTER VISION
+------------------------------------------------------------------------- 
+
+- 4_CV_Preprocess.py
+Script preliminare utilizzato nelle prime fasi per testare il caricamento, 
+il ridimensionamento e la manipolazione iniziale dei file immagine dei cubetti;
+
+- 5_CV_Dataset.py
+Script che integra il controllo di qualità calcolando l'indice SSIM 
+(Structural Similarity Index) di ciascun cubetto rispetto all'immagine di riferimento;
+
+- 6_Train_CNN.py
+Script che configura l'architettura di Deep Learning basata su ResNet-18 per 
+l'estrazione delle caratteristiche visive e la classificazione dei difetti superficiali;
+
+- 7_Grad_Cam.py
+Per i campioni selezionati, lo script calcola il punteggio SSIM rispetto al 
+riferimento e genera mappe termiche (heatmaps) sovrapposte per evidenziare 
+visivamente le aree critiche di stampa. 
