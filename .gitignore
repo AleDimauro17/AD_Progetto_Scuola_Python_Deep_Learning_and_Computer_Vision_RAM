@@ -1,0 +1,14 @@
+# Ambiente virtuale di Python (la tua cartella .venv)
+.venv/
+env/
+ENV/
+
+# Cache di Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# File di configurazione IDE o OS
+.vscode/
+.idea/
+.DS_Store
